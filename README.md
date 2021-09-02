@@ -1,14 +1,38 @@
-# fa_icons
+# FA Icons
 
-A new Flutter package project.
+FA Icons is a plugin to help you easily add Font Awesome icons to your project;
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Using the plugin is very simple, see how to do it below;
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+    final icon = FAIcons.getIcon(uniCode, fontFamily);
+```
+In uniCode you need to enter the icon code, for example f2b9,
+add the value 0x at the beginning, then the uniCode will be 0xf2b9.
+
+The plugin support three families, Regular (far), Brand (fab) and Solid (fas);
+
+to more uniCodes and details visit https://fontawesome.com/
+
+## Example
+
+```dart
+    class ExampleView extends StatefulWidget {
+      const ExampleView({Key? key}) : super(key: key);
+    
+      @override
+      _ExampleViewState createState() => _ExampleViewState();
+    }
+    
+    class _ExampleViewState extends State<ExampleView> {
+    
+      @override
+      Widget build(BuildContext context) {
+        return Container(
+          child: Icon(FAIcons.getIcon(0xf2b9, "far")),
+        );
+      }
+    }
+```

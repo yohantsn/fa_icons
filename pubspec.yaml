@@ -16,6 +16,14 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.hollondevs.faicons
+        pluginClass: FAIcons
+      ios:
+        pluginClass: FAIcons
+
   fonts:
     - family: FontAwesomeBrands
       fonts:
